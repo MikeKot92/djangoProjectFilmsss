@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+
+    {% block title %}
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    {% endblock %}
+
+
+{% block content %}
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {{ forma }}
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

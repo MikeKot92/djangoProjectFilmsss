@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+
+    {% block title %}
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    {% endblock %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_table }}
+    <input type="submit" value="Войти">
+    </form>
+
+    <div class="ssilka">
+        <a href="{% url 'register' %}">Зарегистрироваться</a>
+        <br>
+        <a href="{% url 'password_reset' %}">Забыл пароль</a>
+    </div>
+
+{% endblock %}
+
+
+
+
+

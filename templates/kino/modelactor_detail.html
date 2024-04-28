@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% load static %}
+<!doctype html>
+    {% block title %}
+    <title>Actor</title>
+        <link rel="stylesheet" href="{% static 'css/filmone.css' %}">
+    {% endblock %}
+
+{% block content %}
+
+    <h2>Актер</h2>
+    <h3>{{ modelactor.name }}</h3>
+    <img src="{% static modelactor.foto %}" alt="" width="400">
+    <p>{{ modelactor.info }}</p>
+
+{% endblock %}
+
+
+
+
+
